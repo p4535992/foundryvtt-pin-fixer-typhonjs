@@ -30,7 +30,7 @@ export default defineConfig(({ command }) => {
 			postcss: postcssConfig({
 				compress: COMPRESS,
 				sourceMap: SOURCEMAPS,
-				extract: "style.css",
+				extract: "src/styles/style.css",
 			}),
 		},
 
@@ -41,7 +41,7 @@ export default defineConfig(({ command }) => {
 			port: 30001,
 			open: "/game",
 			proxy: {
-				[`^(/modules/${MODULE_ID}/languages)`]:
+				[`^(/modules/${MODULE_ID}/src/lang)`]:
 					"http://localhost:30000",
 				[`^(?!/modules/${MODULE_ID}/)`]: "http://localhost:30000",
 				"/socket.io": { target: "ws://localhost:30000", ws: true },
@@ -52,7 +52,8 @@ export default defineConfig(({ command }) => {
 		},
 
 		build: {
-			outDir: __dirname,
+			// outDir: __dirname,
+         outDir: 'dist',
 			emptyOutDir: false,
 			sourcemap: SOURCEMAPS,
 			brotliSize: true,

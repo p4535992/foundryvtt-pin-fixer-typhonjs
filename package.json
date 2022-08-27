@@ -1,13 +1,18 @@
 {
-  "name": "template-svelte-esm",
-  "description": "Provides a bare-bones Foundry module template repo to get set up with using the TyphonJS Runtime Library and Svelte with ES Modules.",
-  "license": "MIT",
-  "private": true,
-  "type": "module",
-  "author": "Michael Leahy <support@typhonjs.io> (https://github.com/typhonrt)",
-  "contributors": [
-    "Michael Leahy <support@typhonjs.io> (https://github.com/typhonrt)"
-  ],
+  "name": "pin-fixer",
+  "title": "Pin Fixer",
+  "description": "Make map pins remain the same size regardless of zoom level.",
+  "version": "1.3.0",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "eslint": "eslint .",
+    "package": "gulp package",
+    "buildold": "gulp clean && gulp build && gulp link",
+    "build:watch": "gulp watch",
+    "clean": "gulp clean && gulp link --clean",
+    "prettier-format": "prettier --config .prettierrc --write \"./src/**/*.(ts|js|json|scss|css)\""
+  },
   "dependencies": {
     "@typhonjs-fvtt/runtime": "^0.0.19",
     "@typhonjs-fvtt/svelte-standard": "^0.0.8",
@@ -22,10 +27,5 @@
     "svelte-preprocess": "^4.10.0",
     "vite": "^3"
   },
-  "browserslist": [">5%", "not IE 11"],
-  "scripts": {
-    "build": "vite build",
-    "dev": "vite",
-    "eslint": "eslint ."
-  }
+  "browserslist": [">5%", "not IE 11"]
 }
