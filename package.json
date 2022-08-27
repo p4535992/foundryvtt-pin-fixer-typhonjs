@@ -10,12 +10,15 @@
   ],
   "dependencies": {
     "@typhonjs-fvtt/runtime": "^0.0.19",
-    "svelte": "^3.49.0"
+    "@typhonjs-fvtt/svelte-standard": "^0.0.8",
+		"svelte": "^3.49.0",
+		"svelte-preprocess": "^4.10.7"
   },
   "devDependencies": {
     "@typhonjs-config/eslint-config": "^0.3.0",
     "@typhonjs-fvtt/eslint-config-foundry.js": "^0.8.0",
-    "eslint": "^8",
+		"eslint": "^8.22.0",
+		"eslint-config-arcanist": "^1.5.0",
     "svelte-preprocess": "^4.10.0",
     "vite": "^3"
   },
